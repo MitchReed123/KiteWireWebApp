@@ -10,7 +10,7 @@ const Nav = styled.nav`
   height: 60px;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 2.3rem 2rem;
   z-index: 100;
   position: fixed;
   width: 100%;
@@ -44,7 +44,7 @@ const MenuBars = styled(FaBars)`
     top: 0;
     right: 0;
     transform: translate(-50%, 25%);
-    color: black;
+    color: #fff;
   }
 `;
 
@@ -96,17 +96,23 @@ const Navbar = ({ toggle }) => {
 
   let style = {
     backgroundColor:
-      navbar || location.pathname != "/" ? "#0ff" : "transparent",
+      navbar || location.pathname != "/" ? "#068181" : "transparent",
     transition: "0.4s",
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <Nav style={style}>
-      <Logo to="/">Kitewire Innovation</Logo>
+      <Logo to="/" onClick={scrollTop}>
+        {location.pathname != "/" ? "Kitewire Innovation" : <img src={Logos} />}
+      </Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {MenuItems.map((item, x) => (
-          <NavMenuLinks to={item.link} key={x}>
+          <NavMenuLinks to={item.route} key={x} onClick={scrollTop}>
             {item.title}
           </NavMenuLinks>
         ))}

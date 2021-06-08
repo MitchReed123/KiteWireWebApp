@@ -35,6 +35,74 @@ const ColumnLeft = styled.div`
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 `;
 
+const Inputs = styled.input`
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #0adfdf;
+  line-height: 1.2;
+  height: 45px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 0 5px;
+
+  ::placeholder {
+    color: #fff;
+  }
+
+  ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+
+    background: #57b846;
+  }
+`;
+
+const TextArea = styled.textarea`
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #0adfdf;
+  line-height: 1.2;
+  height: 45px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 0 5px;
+  min-height: 115px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  ::placeholder {
+    color: #fff;
+  }
+
+  ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+
+    /* background: #57b846; */
+  }
+`;
+
 const ContactPage = () => {
   return (
     <Section>
@@ -49,7 +117,7 @@ const ContactPage = () => {
                 <span class="contact100-form-title-1">Contact Us</span>
 
                 <span class="contact100-form-title-2">
-                  Feel free to drop us a line below!
+                  What problem can we help your solve?
                 </span>
               </div>
 
@@ -59,8 +127,8 @@ const ContactPage = () => {
                   data-validate="Name is required"
                 >
                   <span class="label-input100">Full Name:</span>
-                  <input
-                    class="input100"
+                  <Inputs
+                    // class="input100"
                     type="text"
                     name="name"
                     placeholder="Enter Full Name"
@@ -73,8 +141,8 @@ const ContactPage = () => {
                   data-validate="Valid email is required: ex@abc.xyz"
                 >
                   <span class="label-input100">Email:</span>
-                  <input
-                    class="input100"
+                  <Inputs
+                    // class="input100"
                     type="text"
                     name="email"
                     placeholder="Enter Email Addess"
@@ -87,8 +155,8 @@ const ContactPage = () => {
                   data-validate="Phone is required"
                 >
                   <span class="label-input100">Phone:</span>
-                  <input
-                    class="input100"
+                  <Inputs
+                    // class="input100"
                     type="text"
                     name="phone"
                     placeholder="Enter Phone Number"
@@ -101,11 +169,11 @@ const ContactPage = () => {
                   data-validate="Message is required"
                 >
                   <span class="label-input100">Message:</span>
-                  <textarea
-                    class="input100"
+                  <TextArea
+                    // class="input100"
                     name="message"
                     placeholder="Your Comment..."
-                  ></textarea>
+                  ></TextArea>
                   <span class="focus-input100"></span>
                 </div>
 

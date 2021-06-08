@@ -1,23 +1,29 @@
+import PedroImage from "./employees/pedro.png";
+import PaulImage from "./employees/paul.png";
+import KrishnalImage from "./employees/Krishnal.png";
+import DerekImage from "./employees/derek.png";
+import MaryImage from "./employees/Marybeth.png";
+
 export const Employees = [
-  { name: "Pedro Cardoso", img: "../Data/employees/pedro.png", title: "CMO" },
+  { name: "Pedro Cardoso", img: PedroImage, title: "CMO" },
   {
     name: "Paul Symons",
-    img: "../Data/employees/paul.png",
+    img: PaulImage,
     title: "Creative Director",
   },
   {
     name: "Krishnal Jadav",
-    img: "../Data/employees/Krishnal.png",
+    img: KrishnalImage,
     title: "Data Analysis",
   },
   {
     name: "Derek Swanson",
-    img: "../Data/employees/derek.png",
+    img: DerekImage,
     title: "Technology Ninja",
   },
   {
     name: "Marybeth McShea",
-    img: "../Data/employees/Marybeth.png",
+    img: MaryImage,
     title: "Growth Hacker",
   },
 ];

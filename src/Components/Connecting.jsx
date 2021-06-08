@@ -39,6 +39,10 @@ const ColumnRightNew = styled.div`
     color: #fff;
     font-size: clamp(1.5rem, 6vw, 2rem);
     text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   p {
@@ -111,6 +115,7 @@ const ColumnLeft = styled.div`
     color: #fff;
     font-size: clamp(1.5rem, 6vw, 2rem);
     text-transform: uppercase;
+    text-align: center;
   }
 
   p {
@@ -120,7 +125,15 @@ const ColumnLeft = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center; */
+    /* margin-left: 13rem; */
     img {
+      /* margin-top: 30rem;
+      margin-right: 12rem;
+      transform: rotateZ(90deg); */
       display: none;
     }
   }
@@ -168,13 +181,19 @@ const Connecting = () => {
   return (
     <Section>
       <Container>
-        <ColumnLeftNew>
-          <img src={TeddyBear} alt="" />
+        <ColumnLeft>
           <h1
             data-aos="fade-right"
-            data-aos-duration="700"
+            data-aos-duration="500"
             data-aos-delay="200"
           >
+            Connecting
+          </h1>
+          <img src={KiteArrow} />
+        </ColumnLeft>
+        <ColumnRight>
+          <img src={TeddyBear} alt="" />
+          <h1 data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
             We're Chaning Perceptions
           </h1>
           <p>
@@ -182,13 +201,7 @@ const Connecting = () => {
             and learn more about treatment options with a multi-channel
             information and support initiative.
           </p>
-        </ColumnLeftNew>
-        <ColumnRightNew>
-          <img src={KiteArrow} />
-          <h1 data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
-            Connecting
-          </h1>
-        </ColumnRightNew>
+        </ColumnRight>
       </Container>
     </Section>
   );

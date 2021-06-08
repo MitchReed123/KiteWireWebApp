@@ -5,10 +5,16 @@ import Dropdown from "./Components/Dropdown";
 import Navbar from "./Components/Navbar";
 import GlobalStyle from "./globalStyles";
 import Home from "./Pages";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
+// import "antd/dist/antd.css";
+// import "./App.css";
+
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import ContactPage from "./Pages/ContactPage";
+import TeamMembers from "./Pages/TeamMembers";
+import Testing from "./Pages/Testing";
+import What from "./Pages/What";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -33,6 +39,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/Contact" component={ContactPage} />
+        <Route path="/Who" component={TeamMembers} />
+        <Route path="/What" component={What} />
       </Switch>
       <Footer />
       <ScrollToTop />

@@ -106,6 +106,9 @@ const ColumnRightNew = styled.div`
     color: #fff;
     font-size: clamp(1.5rem, 6vw, 2rem);
     text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   p {
@@ -169,26 +172,26 @@ const Influencing = () => {
   return (
     <Section>
       <Container>
-        <ColumnLeftNew>
-          <img src={Dubai} alt="" />
+        <ColumnLeft>
           <h1
             data-aos="fade-right"
-            data-aos-duration="700"
+            data-aos-duration="500"
             data-aos-delay="200"
           >
+            Influencing
+          </h1>
+          <img src={KiteArrow} />
+        </ColumnLeft>
+        <ColumnRight>
+          <img src={Dubai} alt="" />
+          <h1 data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
             Influencing Dubai's Real Estate Market
           </h1>
           <p>
             We’re applying social influencer strategies to one of the most
             competitive real estate markets in the world.
           </p>
-        </ColumnLeftNew>
-        <ColumnRightNew>
-          <img src={KiteArrow} />
-          <h1 data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
-            Influencing
-          </h1>
-        </ColumnRightNew>
+        </ColumnRight>
       </Container>
     </Section>
   );

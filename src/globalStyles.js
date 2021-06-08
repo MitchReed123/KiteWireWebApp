@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+import "aos/dist/aos.css";
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
@@ -14,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     ::selection{
         color: #fff;
         background: #0ff;
+    }
+
+    ::placeholder{
+        color: #0ff;
     }
 `;
 

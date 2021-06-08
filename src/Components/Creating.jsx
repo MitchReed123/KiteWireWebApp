@@ -50,6 +50,9 @@ const ColumnLeft = styled.div`
 
   @media screen and (max-width: 768px) {
     img {
+      /* margin-top: 30rem;
+      margin-right: 12rem;
+      transform: rotateZ(90deg); */
       display: none;
     }
   }

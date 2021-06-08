@@ -11,11 +11,11 @@ const DropdownContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: #15c3c3;
   display: grid;
   align-items: center;
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-  color: #0ff;
+  color: #fff;
   left: 0;
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
@@ -32,7 +32,7 @@ const Icon = styled.div`
 `;
 
 const CloseIcon = styled(FaTimes)`
-  color: #000d1a;
+  color: #fff;
 `;
 
 const DropdownWrapper = styled.div``;
@@ -51,7 +51,8 @@ const DropdownMenu = styled.div`
 
 const DropdownLink = styled(Link)`
   display: flex;
-  color: #0ff;
+  color: #fff;
+  text-decoration: none;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
@@ -80,14 +81,20 @@ const Dropdown = ({ toggle, isOpen }) => {
           <DropdownMenu>
             {MenuItems.map((item, index) => {
               return (
-                <DropdownLink to={item.link} key={index}>
+                <DropdownLink to={item.route} key={index}>
                   {item.title}
                 </DropdownLink>
               );
             })}
           </DropdownMenu>
           <BtnWrap>
-            <Button primary="true" round="true" big="true" to="/content">
+            <Button
+              primary="true"
+              round="true"
+              big="true"
+              to="/Contact"
+              style={{ color: "white", borderColor: "white" }}
+            >
               Contact Us
             </Button>
           </BtnWrap>

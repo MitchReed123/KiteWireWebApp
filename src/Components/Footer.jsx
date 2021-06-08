@@ -165,7 +165,7 @@ const Footer = () => {
             </a>
           </SocialIcons>
           <Contact>
-            <Button to="/Contact" primary>
+            <Button to="/Contact" primary round>
               Let's Chat
               <IoMdArrowRoundForward />
             </Button>

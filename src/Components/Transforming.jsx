@@ -23,6 +23,7 @@ const Container = styled.div`
   grid-template-rows: 800px;
 
   @media screen and (max-width: 768px) {
+    padding: 0;
     grid-template-columns: 1fr;
   }
 `;
@@ -49,6 +50,14 @@ const ColumnLeft = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    /* padding: 0; */
+    /* h1 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    } */
     img {
       display: none;
     }
